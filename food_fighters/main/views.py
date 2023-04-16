@@ -9,7 +9,6 @@ from pathlib import Path
 
 
 
-# Create your views here.
 @api_view(['GET','POST'])
 def index(request):
     global ingcon
