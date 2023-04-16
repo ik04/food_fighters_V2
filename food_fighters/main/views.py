@@ -5,6 +5,9 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http import JsonResponse
 from rest_framework import status
+from pathlib import Path
+
+
 
 # Create your views here.
 @api_view(['GET','POST'])
@@ -16,7 +19,7 @@ def index(request):
     if request.method =="POST":
         ingiq = int(request.data.get("ingredient"))
         dis = int(request.data.get("disease"))
-        df = pd.read_csv("/var/www/html/dev/Project/Food_fighterz_remake/food_fighters/main/Dataset/dummydataset.csv")
+        df = pd.read_csv("main/Dataset/dummydataset.csv")
         if ingiq == 1:
             ingiq = ingiq+1
         if dis == 1:

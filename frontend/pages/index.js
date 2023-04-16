@@ -27,12 +27,9 @@ const index = () => {
         ingredient: ingredient,
         disease: disease,
       });
-      // console.log(resp.data.Recipe);
       setRecipe(resp.data.Recipe);
-      // setSanitizedRecipe(sanitised);
       if (resp.data.Recipe) {
         setShow(true);
-        // let sanitised = sanitizeString(resp.data.Recipe);
       } else {
         setShow(false);
         toast.error(resp.data); // can implement a better way to display this
@@ -41,12 +38,12 @@ const index = () => {
       console.log(error);
     }
   };
-  const handleRecipeApi = async (recipe) => {
-    let query = sanitizeString(recipe);
-    let url = `http://localhost:3000/api/spoonacular?query=${query}`;
-    const resp = await axios.get(url);
-    console.log(resp);
-  };
+  // const handleRecipeApi = async (recipe) => {
+  //   let query = sanitizeString(recipe);
+  //   let url = `http://localhost:3000/api/spoonacular?query=${query}`;
+  //   const resp = await axios.get(url);
+  //   console.log(resp);
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -63,7 +60,7 @@ const index = () => {
   //   if (show) {
   //     handleRecipeApi(recipe);
   //   }
-  // }, [recipe]); to render image in the future
+  // }, [recipe]);
 
   return (
     <div className="overflow-y-hidden h-screen">
@@ -75,14 +72,14 @@ const index = () => {
             <div className="">
               <label
                 htmlFor="Ingredients"
-                className="block mb-2  text-2xl text-white font-mono " // todo make dark mode as well
+                className="block mb-2  text-2xl text-white font-mono "
               >
                 Select an option
               </label>
               <select
                 id="Ingredients"
                 onChange={(e) => setIngredient(e.target.value)}
-                className="bg-gray-50 border text-xl border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border text-xl border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               >
                 <option value="0">[Choose Ingredient]</option>
                 <option value="1">Rice</option>
@@ -103,7 +100,7 @@ const index = () => {
               <select
                 id="countries"
                 onChange={(e) => setDisease(e.target.value)}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               >
                 <option value="0">[Choose Your Condition]</option>
                 <option value="1">Obesity</option>
@@ -117,7 +114,7 @@ const index = () => {
               <div className="">
                 <button
                   type="submit"
-                  className="p-3 bg-cream text-black rounded-lg mt-5 transition delay-150 ease-in-out hover:bg-brown hover:text-cream"
+                  className="p-3 bg-cream text-black rounded-lg mt-5 transition delay-150 ease-in-out hover:bg-darkcream hover:text-white"
                 >
                   Submit
                 </button>
@@ -129,12 +126,10 @@ const index = () => {
               href="#"
               className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 "
             >
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
                 Recommended recipe
               </h5>
-              <p className="font-normal text-gray-700  dark:text-gray-400 text-xl">
-                {recipe}
-              </p>
+              <p className="font-normal text-gray-700  text-xl">{recipe}</p>
             </a>
           )}
         </div>

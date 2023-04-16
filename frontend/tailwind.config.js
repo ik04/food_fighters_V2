@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         olive: "#808000",
         cream: "#F7F1E5",
+        darkcream: "#dfc797",
         forest: "#ABC4AA",
         brown: "#A9907E",
         dyellow: "#F3DEBA",

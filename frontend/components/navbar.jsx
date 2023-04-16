@@ -1,9 +1,10 @@
 import React from "react";
 
 const Navbar = () => {
+  //! mobile first design (for future)
   return (
     <div>
-      <nav class="bg-brown border-gray-200 dark:bg-gray-900 overflow-y-hidden">
+      <nav class="bg-brown border-gray-200 overflow-y-hidden">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between bg-brown mx-auto p-4">
           <a href="/" class="flex items-center">
             <img src="/logo.png" class="h-8 mr-3" alt="FoodFighters Logo" />
@@ -11,7 +12,7 @@ const Navbar = () => {
               FoodFighters
             </span>
           </a>
-          <button
+          {/* <button
             data-collapse-toggle="navbar-default"
             type="button"
             class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -32,13 +33,14 @@ const Navbar = () => {
                 clip-rule="evenodd"
               ></path>
             </svg>
-          </button>
+          </button> */}
+
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-brown">
               <li>
                 <a
                   href="#"
-                  class="block py-2 pl-3 pr-4  text-white bg-blue-700 rounded md:bg-transparent md:text-dyellow md:p-0 dark:text-white md:dark:text-green-500"
+                  class="block py-2 pl-3 pr-4  text-white bg-blue-700 rounded md:bg-transparent md:text-dyellow md:p-0 dark:text-white "
                   aria-current="page"
                 >
                   Home
