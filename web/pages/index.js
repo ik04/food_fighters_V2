@@ -122,15 +122,12 @@ const index = () => {
             </div>
           </form>
           {show && (
-            <a
-              href="#"
-              className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 "
-            >
+            <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
                 Recommended recipe
               </h5>
               <p className="font-normal text-gray-700  text-xl">{recipe}</p>
-            </a>
+            </div>
           )}
         </div>
       </div>
