@@ -4,8 +4,6 @@ import random
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http import JsonResponse
-from rest_framework import status
-from pathlib import Path
 
 
 
@@ -34,7 +32,7 @@ def index(request):
         elif dis == 6:
             discon = "Protein > 50"
     #checking for ingredients in question
-    #conditions
+    #condition
         if ingiq == 2:
             ingcon = "Carbs < 59"
         if ingiq == 3:
