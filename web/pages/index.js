@@ -67,12 +67,16 @@ const index = () => {
       <Toaster position="top-center" reverseOrder={true} />
       <Navbar />
       <div className="w-screen h-full flex justify-center items-center bg-cream">
-        <div className="flex-col rounded-xl bg-forest items-center justify-center p-20 space-y-6">
-          <form action="" onSubmit={handleSubmit}>
+        <div className="flex-col rounded-xl md:bg-forest items-center justify-center p-15 md:p-20 ">
+          <form
+            action=""
+            className="flex-col space-y-8"
+            onSubmit={handleSubmit}
+          >
             <div className="">
               <label
                 htmlFor="Ingredients"
-                className="block mb-2  text-2xl text-white font-mono "
+                className="block text-2xl md:text-white font-mono "
               >
                 Select an option
               </label>
@@ -93,7 +97,7 @@ const index = () => {
             <div className="">
               <label
                 htmlFor="countries"
-                className="block mb-2 text-white text-2xl font-mono mt-3"
+                className="block mb-2 md:text-white text-2xl font-mono mt-3"
               >
                 Select an option
               </label>
@@ -114,7 +118,7 @@ const index = () => {
               <div className="">
                 <button
                   type="submit"
-                  className="p-3 bg-cream text-black rounded-lg mt-5 transition delay-150 ease-in-out hover:bg-darkcream hover:text-white"
+                  className="p-3 bg-darkcream md:bg-cream text-black rounded-lg mt-10 transition delay-150 ease-in-out hover:bg-darkcream hover:text-white"
                 >
                   Submit
                 </button>
@@ -122,7 +126,7 @@ const index = () => {
             </div>
           </form>
           {show && (
-            <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
+            <div className="block max-w-sm p-6 bg-white border mt-10 border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
                 Recommended recipe
               </h5>
