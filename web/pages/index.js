@@ -4,7 +4,7 @@ import { Toaster, toast } from "react-hot-toast";
 import Navbar from "@/components/navbar";
 
 const index = () => {
-  const url = "https://food-fighters-fiij.onrender.com/api/";
+  const url = "https://dockerpractice-rx3f.onrender.com/api/";
   const [ingredient, setIngredient] = useState();
   const [disease, setDisease] = useState();
   const [recipe, setRecipe] = useState();
