@@ -67,7 +67,7 @@ const index = () => {
       <Toaster position="top-center" reverseOrder={true} />
       <Navbar />
       <div className="w-screen h-full flex justify-center items-center bg-cream">
-        <div className="flex-col rounded-xl md:bg-forest items-center justify-center p-15 md:p-20 ">
+        <div className="flex-col rounded-xl md:bg-forest items-center justify-center px-10 md:p-20 ">
           <form
             action=""
             className="flex-col space-y-8"
@@ -125,14 +125,18 @@ const index = () => {
               </div>
             </div>
           </form>
-          {show && (
-            <div className="block max-w-sm p-6 bg-white border mt-10 border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
-                Recommended recipe
-              </h5>
-              <p className="font-normal text-gray-700  text-xl">{recipe}</p>
-            </div>
-          )}
+          <div className="p-6">
+            {show && (
+              <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
+                  Recommended recipe
+                </h5>
+                <p className="font-normal text-gray-700 text-xl text-clip">
+                  {recipe}
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
